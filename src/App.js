@@ -2,7 +2,6 @@ import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Time from './componentes/Time';
-import Rodape from './componentes/Rodape';
 
 function App() {
 
@@ -47,8 +46,7 @@ function App() {
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    debugger
-    setColaboradores([...colaboradores, colaborador])
+      setColaboradores([...colaboradores, colaborador])
   }
 
   return (
@@ -63,8 +61,6 @@ function App() {
         corSecundaria={time.corSecundaria}
         colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
       />)}
-
-      <Rodape />
        
     </div>
   );
